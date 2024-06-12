@@ -1,13 +1,13 @@
 'use client'
 import { LOGO_SVG } from '@/app/lib/constants'
+import { Route, Page } from '@/app/lib/definitions'
 import NavBarItem from '@/app/ui/Header/NavBarItem'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-type RoutesName = 'home' | 'destination' | 'crew' | 'technology'
-type Route = { route: RoutesName, url: string }
+
 const Header = () => {
-  const routes: Route[] = [{
+  const routes: Route<Page>[] = [{
     route: 'home',
     url: '/'
   },

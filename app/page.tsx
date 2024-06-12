@@ -1,11 +1,8 @@
 import { BACKGROUNDS } from "@/app/lib/constants";
-import Banner from "@/app/ui/Banner";
-import Navbar from "@/app/ui/Navbar";
-import Image from "next/image";
+import Header from "@/app/ui/Header/Header";
+import Banner from "@/app/ui/Home/Banner";
 
-export default function Home() {
-  console.log(BACKGROUNDS.HOME.desktop.src);
-  
+export default function Home() {  
   return (
     <main className="flex h-[1024px] flex-col" style={
       {
@@ -14,7 +11,7 @@ export default function Home() {
         backgroundPosition: 'center',
         }
         }>
-        <Navbar />
+        <Header />
       <Banner />
     </main>
   );

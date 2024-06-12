@@ -26,9 +26,9 @@ const config: Config = {
       }
     },
     fontFamily: {
-      'bellefair': ['Bellefair', 'serif'],
-      'barlow': ['Barlow', 'sans-serif'],
-      'barlow-condensed': ['Barlow Condensed', 'sans-serif']
+      'bellefair': ['--font-bellefair', 'serif'],
+      'barlow': ['--font-barlow', 'sans-serif'],
+      'barlow-condensed': ['--font-barlow-condensed', 'sans-serif']
     },
     colors: {
       'white': '#fff',

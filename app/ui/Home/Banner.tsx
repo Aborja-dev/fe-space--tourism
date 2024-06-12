@@ -4,8 +4,8 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <section className='py-[128px] max-w-[1110px] mx-auto h-full'>
-        <div className='flex justify-between items-end h-full'>
+    <section className='max-w-[1110px] mx-auto h-full'>
+        <div className='flex justify-between items-center h-full'>
             <article className='flex jusify-end flex-col space-y-6 text-white w-1/2'>
                 <h2 className={`${bellefair.className} text-hxs font-bellefair text-light-blue`}>SO, YOU WANT TO TRAVEL TO</h2>
                 <h1 className={`text-hxl ${bellefair.className}`}>SPACE</h1>

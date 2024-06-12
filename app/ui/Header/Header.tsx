@@ -29,7 +29,7 @@ const Header = () => {
   console.log(urlPage);
   
   return (
-    <header className='w-full absolute top-[40px] bg-transparent h-20 flex items-center'>
+    <header className='w-full  mt-[40px] bg-transparent h-20 flex items-center'>
       <div className='pl-16 relative w-1/2'>
         <Image src={LOGO_SVG} alt='logo' width={48} height={48} />
         <div className='w-[560px] h-[2px] bg-[#979797] z-50 absolute left-[266px] top-1/2'></div>

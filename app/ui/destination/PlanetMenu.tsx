@@ -24,6 +24,7 @@ const routes: Route<Destination>[] = [
     }
 ]
 
+
 const PlanetMenu = () => {
     const { replace } = useRouter()
     const searchParams = useSearchParams()

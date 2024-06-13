@@ -1,6 +1,6 @@
 import BG_HOME_DESKTOP from "@/public/background/bg-home.jpg";
 import BG_HOME_DESTINATION from "@/public/background/bg-destination.jpg";
-import MOON from "@/public/planets/Moon.png";
+import BG_CREW_DESKTOP from "@/public/background/bg-crew.png";
 import LOGO from "@/public/logo.svg";
 export const BACKGROUNDS = {
     HOME: {
@@ -10,7 +10,7 @@ export const BACKGROUNDS = {
         desktop: BG_HOME_DESTINATION
     },
     CREW: {
-        desktop: BG_HOME_DESKTOP
+        desktop: BG_CREW_DESKTOP
     },
     TECHNOLOGY: {
         desktop: BG_HOME_DESKTOP
@@ -18,6 +18,3 @@ export const BACKGROUNDS = {
 }
 export const LOGO_SVG = LOGO
 
-export const PLANETS = {    
-    MOON
-}

@@ -1,4 +1,4 @@
-import { Planet } from "@/app/lib/definitions";
+import { CrewMenber, Planet } from "@/app/lib/definitions";
 
 const destination: Planet[] = [
     {
@@ -30,10 +30,45 @@ const destination: Planet[] = [
         travel: '7 years'
     }
 ]
-
+const members: CrewMenber[] = [
+    {
+        id: 1,
+        name: 'Douglas Hurley',
+        images: '/members/Image-crew-02.png',
+        role: 'Commander',
+        bio: 'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.'
+    },
+    {
+        id: 2,
+        name: 'Mark Shuttleworth',
+        images: '/members/Image-crew-03.png',
+        role: 'Mission Specialist',
+        bio: 'The commander of the USS Discovery program, andocketed multiple launches to further his knowledge of the universe.'
+    },
+    {
+        id: 3,
+        name: 'Victor Glover',
+        images: '/members/Image-crew-01.png',
+        role: 'Pilot',
+        bio: 'Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. air force. '
+    },
+    {
+        id: 4,
+        name: 'Anousheh Ansari',
+        images: '/members/Image-crew-04.png',
+        role: 'Flight Engineer',
+        bio: 'Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded woman in the space industry. '
+    }
+]
 export const getDestinations = (time = 0): Promise<Planet[]> => new Promise(resolve => setTimeout(() => resolve(destination), time))
 export const getDestinationByName = (name: string): Promise<Planet> => new Promise(resolve => {
     const planet = destination.find(planet => planet.name.toLowerCase() === name)
     if (planet) resolve(planet)
     else resolve(destination[0])
+})
+export const getMembers = (time = 0): Promise<CrewMenber[]> => new Promise(resolve => setTimeout(() => resolve(members), time))
+export const getMemberById = (id: string): Promise<CrewMenber> => new Promise(resolve => {
+    const member = members.find(member => Number(id) === member.id)
+    if (member) resolve(member)
+    else resolve(members[0])
 })

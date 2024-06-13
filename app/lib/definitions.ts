@@ -9,3 +9,11 @@ export interface Planet {
     distance: string
     travel: string
 }
+
+export interface CrewMenber {
+    id: number
+    name: string
+    images: string
+    role: string
+    bio: string
+}

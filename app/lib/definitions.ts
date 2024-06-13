@@ -17,3 +17,9 @@ export interface CrewMenber {
     role: string
     bio: string
 }
+
+export interface Technology {
+    title: string
+    image: string
+    description: string
+}

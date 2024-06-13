@@ -1,4 +1,4 @@
-import { CrewMenber, Planet } from "@/app/lib/definitions";
+import { CrewMenber, Planet, Technology } from "@/app/lib/definitions";
 
 const destination: Planet[] = [
     {
@@ -60,6 +60,24 @@ const members: CrewMenber[] = [
         bio: 'Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded woman in the space industry. '
     }
 ]
+
+const concepts: Technology[] = [
+    {
+        title: 'Launch vehicle',
+        image: '/technology/Technology-Image-A.jpg',
+        description: `A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`
+    },
+    {
+        title: 'Spaceport',
+        image: '/technology/Technology Image - B.jpg',
+        description: 'A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.'
+    },
+    {
+        title: 'Space capsule',
+        image: '/technology/Technology Image - C.jpg',
+        description: 'A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth’s atmosphere without wings. Our capsule is where you can relax on your couch and receive a taste of our oceanwide adventure.'
+    }
+]
 export const getDestinations = (time = 0): Promise<Planet[]> => new Promise(resolve => setTimeout(() => resolve(destination), time))
 export const getDestinationByName = (name: string): Promise<Planet> => new Promise(resolve => {
     const planet = destination.find(planet => planet.name.toLowerCase() === name)
@@ -71,4 +89,10 @@ export const getMemberById = (id: string): Promise<CrewMenber> => new Promise(re
     const member = members.find(member => Number(id) === member.id)
     if (member) resolve(member)
     else resolve(members[0])
+})
+
+export const getConceptByName = (name: string): Promise<Technology> => new Promise(resolve => {
+    const concept = concepts.find(concept => concept.title.toLowerCase() === name)
+    if (concept) resolve(concept)
+    else resolve(concepts[0])
 })
